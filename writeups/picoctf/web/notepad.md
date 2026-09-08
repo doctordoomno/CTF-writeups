@@ -89,4 +89,8 @@ when resolve on real disk it will look like this
 
 which mean we have our templates on ```\test-<token>.html```
 
+but we need to make it furthur than 128 character to make sure our script is not on file name test on --> ```..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\app\templates\errors\te{{7*7}}```
+
+
+
 
