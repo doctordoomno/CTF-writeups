@@ -66,6 +66,7 @@ we need to make content input to here so
 
 # PLAN
 1.find a way to make input appear on ```error``` template
+
 2.craft a payload that bypass filter "_" and " / " and put it after 128 character
 
 # TEST
