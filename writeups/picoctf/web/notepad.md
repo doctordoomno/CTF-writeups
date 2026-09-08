@@ -71,3 +71,16 @@ we need to make content input to here so
 
 # TEST
 * make payload appear on error page
+
+<img width="715" height="293" alt="image" src="https://github.com/user-attachments/assets/59f311e9-0585-42dc-84f6-791259aef358" />
+
+```pythno
+name = f"static/{url_fix(content[:128])}-{token_urlsafe(8)}.html"
+```
+when source code put our payoad in it will look like this
+```static/../templates/errors/test-<token>.html```
+when resolve on real disk it will look like this
+```/app/templates/errors/test-<token>.html```
+which mean we have our templates on ```\test-<token>.html```
+
+
