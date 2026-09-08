@@ -72,6 +72,8 @@ we need to make content input to here so
 # TEST
 * make payload appear on error page
 
+payload --> ```..\templates\errors\test```
+
 <img width="553" height="263" alt="image" src="https://github.com/user-attachments/assets/8d7dbe3a-e62b-4aa9-98c4-61af96ad05d0" />
 
 ```python
