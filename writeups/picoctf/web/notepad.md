@@ -8,7 +8,7 @@ This challenges give you a web that take user input and render it out as html pa
 <img width="562" height="117" alt="image" src="https://github.com/user-attachments/assets/25e75dd6-bb27-489a-b780-a0794d516a9a" />
 
 on source code app.py
-
+```python
 from werkzeug.urls import url_fix
 from secrets import token_urlsafe
 from flask import Flask, request, render_template, redirect, url_for
@@ -30,5 +30,5 @@ def create():
     with open(name, "w") as f:
         f.write(content)
     return redirect(name)
-
+```
 
