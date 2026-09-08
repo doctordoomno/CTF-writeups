@@ -111,7 +111,9 @@ in jinja is to execute everything inside {{ ... }} and show output on screen
 
 application is a flask app object that has function in it and every function has ```__globals__``` then get to ```__builtins__``` that contain every python function and then we import os and run ls /app by popen in shell to see every file in /app and read it out to string as an output
 
-next we need to bypass filter "_" with \x5f and " / " with " \ "
+next we need to bypass filter "_" with "\x5f" and " / " with " \ " problems is  "ls /app" we need to bypass " / " with encode it to base64 
+
+"bHMgL2FwcA==" and command we run ```echo -n bHMgL2FwcA== | base64 -d | bash``` send bHMgL2FwcA== into base64 decode and then run in sehll
 
 our final payload is
 
