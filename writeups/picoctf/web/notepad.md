@@ -41,3 +41,5 @@ filters "_" and "/" from input then redirect to index page where error="bad_cont
     if "_" in content or "/" in content:
         return redirect(url_for("index", error="bad_content"))
 ```
+this is index.html in source code
+<img width="650" height="301" alt="image" src="https://github.com/user-attachments/assets/1a4fa4f5-4cb2-4982-93fb-6ac71911c8a8" />
