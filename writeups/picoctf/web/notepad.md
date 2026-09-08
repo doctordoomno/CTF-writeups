@@ -74,7 +74,7 @@ we need to make content input to here so
 
 <img width="715" height="293" alt="image" src="https://github.com/user-attachments/assets/59f311e9-0585-42dc-84f6-791259aef358" />
 
-```pythno
+```python
 name = f"static/{url_fix(content[:128])}-{token_urlsafe(8)}.html"
 ```
 when source code put our payoad in it will look like this
