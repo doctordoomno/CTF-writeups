@@ -31,4 +31,13 @@ def create():
         f.write(content)
     return redirect(name)
 ```
-
+what this code do ?
+web recieve content from user input
+```python
+content = request.form.get("content", "")
+```
+filters "_" and "/" from input then redirect to index page where error="bad_content"
+```python
+    if "_" in content or "/" in content:
+        return redirect(url_for("index", error="bad_content"))
+```
