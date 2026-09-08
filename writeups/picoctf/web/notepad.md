@@ -91,7 +91,7 @@ which mean we have our templates on ```\test-<token>.html```
 
 but we need to make it furthur than 128 character to make sure our script is not on file name 
 
-so we test on --> ```..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\app\templates\errors\te{{7*7}}```
+so we test on --> ```..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\app\templates\errors\test{{7*7}}```
 
 
 
