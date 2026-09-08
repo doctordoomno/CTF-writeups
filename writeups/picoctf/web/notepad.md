@@ -62,7 +62,11 @@ on **{{ error }}** there's is nothing we can do it completely escaped
 
 but **{% include "errors/" + error + ".html" ignore missing %} {% endif %}** this take ```error``` directly in path render it as html
 
-we need to make content input to appear here
+we need to make content input to here so
 
 # PLAN
-1.
+1.find a way to make input appear on ```error``` template
+2.craft a payload that bypass filter "_" and " / " and put it after 128 character
+
+# TEST
+* make payload appear on error page
