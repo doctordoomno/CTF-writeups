@@ -60,7 +60,9 @@ this is index.html in source code
 
 on **{{ error }}** there's is nothing we can do it completely escaped
 
-but **{% include "errors/" + error + ".html" ignore missing %} {% endif %}** this take error directly in path render it as html
+but **{% include "errors/" + error + ".html" ignore missing %} {% endif %}** this take ```error``` directly in path render it as html
+
+we need to make content input to appear here
 
 # PLAN
 1.
