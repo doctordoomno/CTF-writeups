@@ -72,7 +72,7 @@ we need to make content input to here so
 # TEST
 * make payload appear on error page
 
-<img width="715" height="293" alt="image" src="https://github.com/user-attachments/assets/59f311e9-0585-42dc-84f6-791259aef358" />
+<img width="553" height="263" alt="image" src="https://github.com/user-attachments/assets/8d7dbe3a-e62b-4aa9-98c4-61af96ad05d0" />
 
 ```python
 name = f"static/{url_fix(content[:128])}-{token_urlsafe(8)}.html"
