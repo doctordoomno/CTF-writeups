@@ -48,7 +48,7 @@ if string is longer than 512 render index.html page where error="bad_content"
 ```
 then redirect to /static "url_fix" take first 128 character to filename change content to correct url and end with random 8 character
 
-**note** url_fix will change "/" to ""/""
+**note** url_fix will change " / " to " / "
 ```python
 name = f"static/{url_fix(content[:128])}-{token_urlsafe(8)}.html"
 ```
