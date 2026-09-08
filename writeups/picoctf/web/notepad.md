@@ -93,7 +93,7 @@ but we need to make it furthur than 128 character to make sure our script is not
 
 so we test on --> ```..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\app\templates\errors\test{{7*7}}```
 
-<img width="848" height="258" alt="image" src="https://github.com/user-attachments/assets/d737a071-c82e-4369-9db3-8c2243a0404f" />
+<img width="838" height="287" alt="image" src="https://github.com/user-attachments/assets/52d01b5a-7ea7-4982-b352-c599f5a9a6cf" />
 
 and that work very well
 
