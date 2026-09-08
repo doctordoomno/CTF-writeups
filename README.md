@@ -1,2 +1,2 @@
 # CTF-writeups
-Welcome to my This repository contain challenge from ctf i have solved and place for myself to learn
+Welcome to my CTF writeups repository, This repository contain challenge and technique i used to solve various challenge mainly in **web-application** category 
