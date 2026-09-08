@@ -97,5 +97,9 @@ so we test on --> ```..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..
 
 and that work very well
 
+so now we need to craft our payload
+
+
+
 
 
