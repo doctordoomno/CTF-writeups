@@ -61,3 +61,6 @@ this is index.html in source code
 on **{{ error }}** there's is nothing we can do it completely escaped
 
 but **{% include "errors/" + error + ".html" ignore missing %} {% endif %}** this take error directly in path render it as html
+
+# PLAN
+1.
