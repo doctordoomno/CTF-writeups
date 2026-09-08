@@ -84,7 +84,7 @@ This is `index.html`:
 * `{{ error }}` — printed as text. Jinja auto-escapes HTML here, so there is nothing we can do with it.
 * `{% include "errors/" + error + ".html" ignore missing %}` — `error` is concatenated
   **into the path of a template that gets included and rendered**. This is the real bug:
-  we control *which template file* gets rendered.
+  we control *which template file* gets rendered. if it has jinja file it will run as well
 
 We need to make our own input become an included template. So:
 
