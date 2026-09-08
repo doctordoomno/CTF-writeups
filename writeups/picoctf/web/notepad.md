@@ -78,9 +78,13 @@ we need to make content input to here so
 name = f"static/{url_fix(content[:128])}-{token_urlsafe(8)}.html"
 ```
 when source code put our payoad in it will look like this
+
 ```static/../templates/errors/test-<token>.html```
+
 when resolve on real disk it will look like this
+
 ```/app/templates/errors/test-<token>.html```
+
 which mean we have our templates on ```\test-<token>.html```
 
 
