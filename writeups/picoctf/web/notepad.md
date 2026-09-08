@@ -44,5 +44,6 @@ filters "_" and "/" from input then render index.html page where error="bad_cont
 this is index.html in source code
 
 <img width="650" height="301" alt="image" src="https://github.com/user-attachments/assets/1a4fa4f5-4cb2-4982-93fb-6ac71911c8a8" />
+
 on {{ error }} there's is nothing we can do it completely escaped
 but {% include "errors/" + error + ".html" ignore missing %} {% endif %} this take error directly in path that's a vulnerability
