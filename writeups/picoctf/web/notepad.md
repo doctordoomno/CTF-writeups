@@ -41,6 +41,17 @@ filters "_" and "/" from input then render index.html page where error="bad_cont
     if "_" in content or "/" in content:
         return redirect(url_for("index", error="bad_content"))
 ```
+if string is longer than 512 render index.html page where error="bad_content"
+```python
+    if len(content) > 512:
+        return redirect(url_for("index", error="long_content", len=len(content)))
+```
+then redirect to /static "url_fix" take first 128 character to filename change content to correct url and end with random 8 character
+
+**note** url_fix will change "/" to "\"
+```python
+name = f"static/{url_fix(content[:128])}-{token_urlsafe(8)}.html"
+```
 this is index.html in source code
 
 <img width="650" height="301" alt="image" src="https://github.com/user-attachments/assets/1a4fa4f5-4cb2-4982-93fb-6ac71911c8a8" />
