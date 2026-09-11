@@ -225,7 +225,7 @@ from this code we need to send 3 piece ```certificate```, ```nonce```, ```signat
 
 if all 3 piece is correct we will get our flag
 
-so let's look on /admin source code :
+so let's look on ```/admin``` source code :
 
 ```python
 @app.post("/admin", response_model=AdminResponse)
