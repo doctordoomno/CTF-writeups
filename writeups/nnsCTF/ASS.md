@@ -224,3 +224,57 @@ from this code we need to send 3 piece ```certificate```, ```nonce```, ```signat
 ```
 
 if all 3 piece is correct we will get our flag
+
+so let's look on /admin source code :
+
+```python
+@app.post("/admin", response_model=AdminResponse)
+def administration(request: AdminRequest) -> AdminResponse:
+    with lock:
+        administrator_certificate = administrator
+    if administrator_certificate is None:
+        raise HTTPException(
+            status_code=409, detail="no administrator certificate has been provisioned"
+        )
+
+    if len(request.certificate) > MAX_CERTIFICATE_PEM:
+        raise HTTPException(status_code=400, detail="certificate too large")
+    try:
+        presented = x509.load_pem_x509_certificate(request.certificate.encode())
+    except ValueError:
+        raise HTTPException(status_code=400, detail="malformed certificate") from None
+    try:
+        signature = base64.b64decode(request.signature, validate=True)
+    except (binascii.Error, ValueError):
+        raise HTTPException(status_code=400, detail="malformed signature") from None
+
+    if not consume_nonce(request.nonce):
+        raise HTTPException(status_code=401, detail="unknown or expired nonce")
+    if not authority.issued_by_us(presented):
+        raise HTTPException(
+            status_code=401, detail="certificate was not issued by this authority"
+        )
+    if not ca.is_in_validity_period(presented):
+        raise HTTPException(
+            status_code=401, detail="certificate is not valid at this time"
+        )
+
+    public_key = presented.public_key()
+    if not isinstance(public_key, ed25519.Ed25519PublicKey):
+        raise HTTPException(status_code=401, detail="unsupported certificate key type")
+    try:
+        public_key.verify(signature, request.nonce.encode())
+    except InvalidSignature:
+        raise HTTPException(
+            status_code=401, detail="signature does not verify"
+        ) from None
+
+    try:
+        authorized = ca.subject(presented) == ca.subject(administrator_certificate)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="malformed certificate") from None
+    if not authorized:
+        raise HTTPException(status_code=403, detail="not the administrator")
+
+    return AdminResponse(flag=FLAG)
+```
