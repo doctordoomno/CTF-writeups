@@ -204,3 +204,15 @@ def administration(request: AdminRequest) -> AdminResponse:
 
 ```
 
+This part of code will return flag we will start from here
+
+```python
+class AdminRequest(BaseModel):
+    certificate: str
+    nonce: str
+    signature: str
+
+
+class AdminResponse(BaseModel):
+    flag: str
+```
