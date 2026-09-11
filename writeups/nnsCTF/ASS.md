@@ -217,7 +217,10 @@ class AdminResponse(BaseModel):
     flag: str
 ```
 
-from this code we need to send 3 thing ```certificate```, ```nonce```, ```signature``` to 
+from this code we need to send 3 piece ```certificate```, ```nonce```, ```signature``` to 
+
 ```python
 /admin
 ```
+
+if all 3 piece is correct we will get our flag
