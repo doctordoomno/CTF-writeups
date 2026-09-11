@@ -216,3 +216,5 @@ class AdminRequest(BaseModel):
 class AdminResponse(BaseModel):
     flag: str
 ```
+
+from this code we need to send 3 thing to ```certificate```, ```nonce```, ```signature```
