@@ -16,5 +16,5 @@ This challenge gives you a web app that:
   
   private key:
   
-```"private_key": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VwBCIEIMoierWmyFHADQzR7vepwObyPYqGojWhqyB5PNvzl5KW\n-----END PRIVATE KEY-----\n"```
+  ```"private_key": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VwBCIEIMoierWmyFHADQzR7vepwObyPYqGojWhqyB5PNvzl5KW\n-----END PRIVATE KEY-----\n"```
 
